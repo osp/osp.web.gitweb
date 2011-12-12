@@ -887,8 +887,34 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
 
 /* And then we write our functions here: */
 
+/* These are repositories that are potentially useful to us,
+yet potentially confusing to visitors: meta-repositories, skeletons */
+
+var blacklist = ["osp.all.git",
+"osp.foundry.DLF.git",
+"osp.foundry.VJ12.git",
+"osp.foundry.all.git",
+"osp.foundry.alphabet.git",
+"osp.foundry.cimatics.git",
+"osp.foundry.libertinage.git",
+"osp.foundry.limousine.git",
+"osp.foundry.logisoso.git",
+"osp.foundry.polsku.git",
+"osp.foundry.wdroge.git"]
+
 $(function() {
+    /* The links on the homepage go directly to *tree* (the files) 
+       This is more informative, especially to outsiders */
     $("a.list").each(function() {
         $(this).attr('href', $(this).attr('href').replace("summary","tree"))
     })
+    /* By default, remove a list of non-public repos.
+       Show them by appending ?all to to the home page uri */
+    if (document.location.href.indexOf("all") === -1) {
+        $("table.project_list tr").each(function() {
+            if ( jQuery.inArray( $($(this).find("td a")[0]).text() , blacklist )  > -1 ) {
+                $(this).remove();
+            }
+        })
+    }
 })
