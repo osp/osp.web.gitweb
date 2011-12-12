@@ -887,3 +887,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
 
 /* And then we write our functions here: */
 
+$(function() {
+    $("a.list").each(function() {
+        $(this).attr('href', $(this).attr('href').replace("summary","tree"))
+    })
+})
