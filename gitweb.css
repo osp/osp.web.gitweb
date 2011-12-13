@@ -86,9 +86,7 @@ td, th {
 /* Page Header
 ---------------------------------------------------------------------------- */
 .page_header {
-  height: 50px;
   line-height: 50px;
-  position: relative;
   padding: 0 27px;
   margin-bottom: 20px;
   font-size: 20px;
@@ -96,6 +94,12 @@ td, th {
   background: #FFFFFF;
   /* old browsers */
   border-bottom: 1px solid #dfdfdf; }
+ 
+.page_header .description {
+  padding: 0px 3px 20px 3px;
+  line-height: 27px;
+  font-size: 18px;
+}
 
 .page_header a:link, .page_header a:visited {
   color: #4183C4;

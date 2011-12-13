@@ -917,4 +917,12 @@ $(function() {
             }
         })
     }
+    /* Change the header to add the repository description */
+    // remove the Git logo:
+    $($("div.page_header a")[0]).remove();
+    // move the text from bottom to top
+    var descriptionText = $("div.page_footer_text").text();
+    $("div.page_footer_text").remove();
+    $("div.page_header").append('<div class="description">' +
+    descriptionText + '</div>');    
 })
