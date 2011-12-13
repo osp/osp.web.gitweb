@@ -924,5 +924,10 @@ $(function() {
     var descriptionText = $("div.page_footer_text").text();
     $("div.page_footer_text").remove();
     $("div.page_header").append('<div class="description">' +
-    descriptionText + '</div>');    
+    descriptionText + '</div>');
+    /* Make download link more descriptive */
+    if ( $($("div.page_nav a").get(-1)).text() === "snapshot" ) {
+        $($("div.page_nav a").get(-1)).text("Download files")
+        $($("div.page_nav a").get(-1)).addClass("download_link")
+    }
 })
