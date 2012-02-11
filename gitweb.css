@@ -53,7 +53,7 @@ body {
   color: #000000; }
 
 a:link, a:visited {
-  color: #4183C4;
+  color: Indigo;
   text-decoration: none; }
 
 a:hover {
@@ -110,7 +110,7 @@ td, th {
 }
 
 .page_header a:link, .page_header a:visited {
-  color: #4183C4;
+  color: Indigo;
   text-decoration: none;
   padding: 3px;
   font-weight: bold; }
