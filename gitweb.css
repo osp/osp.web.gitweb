@@ -62,9 +62,16 @@ a:hover {
 a.download_link {
   color: #ff5034;
   margin: 3px 12px 3px 0;
-  padding: 2px;
-  border-radius: 10px;
-  border: 2px solid #ff5034;
+  padding: 2px 9px;
+  /*border-radius: 10px;*/
+  border: 1px solid #ff5034;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+a.download_link:hover {
+  background-color: #ff5034;
+  color: white;
+  text-decoration: none;
 }
 
 td.list a[href*='a=tree'], td.list a[href*='a=blob'] {
